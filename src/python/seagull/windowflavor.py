@@ -20,14 +20,25 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 """
 
-import logging
-# only Windows is supported at this point
-from seagull.os.windows.util import getWindowsVersion
+from sikuli.Sikuli import Env
 
-_LOGGER = logging.getLogger(__name__)
+# only Windows is supported at this point
+
+def getWindowsVersion():
+    """Returns the Windows version.
+       The return values is 'XP', 'Vista' or '7'.
+    """
+    rawversion = Env.getOSVersion()
+    if rawversion[0] == '7':
+        return '7'
+    elif rawversion[0] == '6':
+        return 'Vista'
+    elif rawversion[0] == '5':
+        return 'XP'
+    else:
+        raise Exception('unknown OS version: %s' % rawversion)
 
 WINDOWS_VERSION = getWindowsVersion()
-_LOGGER.info('Windows version is %s' % WINDOWS_VERSION)
 if WINDOWS_VERSION == 'XP':
     from seagull.os.windowsxp import *
 elif WINDOWS_VERSION == 'Vista':

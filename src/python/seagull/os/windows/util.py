@@ -23,23 +23,10 @@ THE SOFTWARE.
 import os, os.path, subprocess, tempfile
 from java.awt import Toolkit
 from java.awt.datatransfer import DataFlavor
-from sikuli.Sikuli import openApp, Env
+from sikuli.Sikuli import openApp
 from sikuli.Key import Key, KEY_CTRL, KEY_SHIFT
 from seagull.util import typeKeys
-
-def getWindowsVersion():
-    """Returns the Windows version.
-       The return values is 'XP', 'Vista' or '7'.
-    """
-    rawversion = Env.getOSVersion()
-    if rawversion[0] == '7':
-        return '7'
-    elif rawversion[0] == '6':
-        return 'Vista'
-    elif rawversion[0] == '5':
-        return 'XP'
-    else:
-        raise Exception('unknown OS version: %s' % rawversion)
+from seagull.windowflavor import *
 
 def getUsername():
     """Returns the name of the current user.
