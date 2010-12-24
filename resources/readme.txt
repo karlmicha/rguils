@@ -1,4 +1,4 @@
-Setting up Seagull:
+Setting up RGUILS on Windows systems:
 
 1. Copy the following files to the Sikuli IDE installation folder (usually
 C:\Program Files\Sikuli on Windows systems):
@@ -12,5 +12,5 @@ Settings\{username}\Sikuli on Windows XP, C:\Users\{username}\Sikuli on Windows
 Vista and Windows 7), edit userlib.py in the Sikuli IDE installation folder and
 set the USERLIBDIR to point to your Sikuli folder.
 
-3. Put the contents of the Seagull\src\python folder (seagull, sikuliimport)
+3. Put the contents of the src\python folder (seagull, sikuliimport)
 into your Sikuli folder.
