@@ -1,4 +1,4 @@
-RGUILS: <b>R</b>obust <b>GUI</b> Automation <b>L</b>ibrary for <b>S</b>ikuli
+RGUILS: **R**obust **GUI** Automation **L**ibrary for **S**ikuli
 
   1. _ro-gels_ = [roʊgəls]
   1. _ra-gils_ = [rɑ:gɪls]
@@ -15,32 +15,32 @@ Say you have an application with three buttons Back, Next, Cancel that you want 
 
 Create a Sikuli project with constants for the images of all your buttons in different states:
 
-<img src='http://rguils.googlecode.com/svn/wiki/images/project_buttons.jpg' border='1'>
+![project buttons](wiki/images/project_buttons.jpg)
 
-<h2>2. Configure the import</h2>
+## 2. Configure the import
 
-Tell RGUILS where to find your Sikuli project. Put the following line in <code>sikuliimport\settings.py</code>:<br>
-<br>
-<pre><code>SIKULI_PROJECT_DIRS = ['C:\\Documents and Settings\\username\\Sikuli\\buttons.sikuli']<br>
-</code></pre>
+Tell RGUILS where to find your Sikuli project. Put the following line in `sikuliimport\settings.py`:
+```python
+SIKULI_PROJECT_DIRS = ['C:\\Documents and Settings\\username\\Sikuli\\buttons.sikuli']
+```
 
-<h2>3. Use the RGUILS API</h2>
+## 3. Use the RGUILS API
 
-Now you can use your button images to automate the buttons of your application in a robust way. RGUILS automatically groups your button images by button type, detects which buttons exist on the screen and whether they are enabled or disabled, and lets you click on them:<br>
-<br>
-<pre><code>from seagull.images import IMG_BUTTONS, IMG_BUTTONS_DISABLED<br>
-from seagull.buttons import Buttons<br>
-<br>
-# define buttons<br>
-buttons = Buttons(IMG_BUTTONS, IMG_BUTTONS_DISABLED)<br>
-<br>
-# locate buttons on the screen<br>
-buttons.find_buttons()<br>
-<br>
-buttons.waitUntilButtonIsEnabled('next', 15)<br>
-buttons.click('next')<br>
-</code></pre>
+Now you can use your button images to automate the buttons of your application in a robust way. RGUILS automatically groups your button images by button type, detects which buttons exist on the screen and whether they are enabled or disabled, and lets you click on them:
+```python
+from seagull.images import IMG_BUTTONS, IMG_BUTTONS_DISABLED
+from seagull.buttons import Buttons
 
-<h1>Learn more</h1>
+# define buttons
+buttons = Buttons(IMG_BUTTONS, IMG_BUTTONS_DISABLED)
 
-To learn how to use RGUILS, read the SampleInstaller tutorial. To start using RGUILS, please visit the GettingStarted page. To learn more about Sikuli, read this SikuliOverview. For a more in-depth discussion of GUI automation issues, read this page about <a href='RobustGUIAutomation.md'>RobustGUIAutomation</a>.
+# locate buttons on the screen
+buttons.find_buttons()
+
+buttons.waitUntilButtonIsEnabled('next', 15)
+buttons.click('next')
+```
+
+# Learn more
+
+To learn how to use RGUILS, read the SampleInstaller tutorial. To start using RGUILS, please visit the GettingStarted page. To learn more about Sikuli, read this SikuliOverview. For a more in-depth discussion of GUI automation issues, read this page about [robust GUI automation](RobustGUIAutomation).
