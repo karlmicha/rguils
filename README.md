@@ -15,7 +15,7 @@ Say you have an application with three buttons Back, Next, Cancel that you want 
 
 Create a Sikuli project with constants for the images of all your buttons in different states:
 
-![project buttons](wiki/images/project_buttons.jpg)
+![project buttons](https://github.com/karlmicha/rguils/wiki/images/project_buttons.jpg)
 
 ## 2. Configure the import
 
