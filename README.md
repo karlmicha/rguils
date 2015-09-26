@@ -43,4 +43,4 @@ buttons.click('next')
 
 # Learn more
 
-To learn how to use RGUILS, read the [SampleInstaller](SampleInstaller) tutorial. To start using RGUILS, please visit the [GettingStarted](GettingStarted) page. To learn more about Sikuli, read this [Sikuli overview](SikuliOverview). For a more in-depth discussion of GUI automation issues, read this page about [robust GUI automation](https://github.com/karlmicha/rguils/wiki/RobustGUIAutomation).
+To learn how to use RGUILS, read the [SampleInstaller](https://github.com/karlmicha/rguils/wiki/SampleInstaller) tutorial. To start using RGUILS, please visit the [GettingStarted](https://github.com/karlmicha/rguils/wiki/GettingStarted) page. To learn more about Sikuli, read this [Sikuli overview](https://github.com/karlmicha/rguils/wiki/SikuliOverview). For a more in-depth discussion of GUI automation issues, read this page about [robust GUI automation](https://github.com/karlmicha/rguils/wiki/RobustGUIAutomation).
